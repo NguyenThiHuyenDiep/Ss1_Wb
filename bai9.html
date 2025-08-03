@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        function add(arr1,arr2){
+    let arr=[]
+    arr.splice(0,0,...arr1);
+    arr.splice(arr1.length-1,0,...arr2)
+    for(let i=0;i<arr.length-1;i++){
+        for(let j=0; j<arr.length-1-i;j++){
+            if(arr[j]>arr[j+1]){
+                [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
+            }
+        }
+    }
+    console.log(arr)
+}
+add([1,2,3,5,9],[4,6,7,8])
+    </script>
+</body>
+</html>
